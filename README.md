@@ -2,6 +2,19 @@
 
 TODO: Write a gem description
 
+
+## Features
+
+Give a timeframe, an hour ago, three weeks ago, etc, and return all log entries from then to now 
+
+Give a date range, August 1 - August 5, and return the long entries from the first date to the second date
+
+Use the timeframe or date range, give a search term, and only return the log lines that contain the search word
+
+Some sort of coloring scheme
+
+The option to put the results out to a file
+
 ## Installation
 
 Add this line to your application's Gemfile:
