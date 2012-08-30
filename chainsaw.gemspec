@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "chainsaw"
   gem.require_paths = ["lib"]
   gem.version       = Chainsaw::VERSION
+
+  gem.add_development_dependency 'minitest', '~> 3.0.0'
 end
