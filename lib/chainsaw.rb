@@ -1,4 +1,5 @@
-require "chainsaw/version"
+require 'chainsaw/cli'
+require 'chainsaw/version'
 
 module Chainsaw
   # Your code goes here...

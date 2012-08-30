@@ -1,8 +1,5 @@
 # Chainsaw
 
-TODO: Write a gem description
-
-
 ## Features
 
 Give a timeframe, an hour ago, three weeks ago, etc, and return all log entries from then to now 
@@ -20,14 +17,9 @@ The option to put the results out to a file
 Add this line to your application's Gemfile:
 
     gem 'chainsaw'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install chainsaw
+=======
+* whatever
+* blah
 
 ## Usage
 
