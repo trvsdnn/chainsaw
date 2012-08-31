@@ -1,0 +1,212 @@
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20090626/msql.so' - /usr/lib/php5/20090626/msql.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[Sun Aug 26 07:42:20 2012] [notice] Apache/2.2.22 (Ubuntu) PHP/5.3.10-1ubuntu3.2 with Suhosin-Patch configured -- resuming normal operations
+[Mon Aug 27 14:17:05 2012] [notice] caught SIGTERM, shutting down
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20090626/msql.so' - /usr/lib/php5/20090626/msql.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[Mon Aug 27 14:31:06 2012] [notice] Apache/2.2.22 (Ubuntu) PHP/5.3.10-1ubuntu3.2 with Suhosin-Patch configured -- resuming normal operations
+[Mon Aug 27 14:31:40 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:32:38 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function the_field() in /var/www/thek5.com/blog/wp-content/themes/thek5/header.php on line 37
+[Mon Aug 27 14:32:38 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:32:42 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function the_field() in /var/www/thek5.com/blog/wp-content/themes/thek5/header.php on line 37, referer: http://thek5.com/
+[Mon Aug 27 14:32:42 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:32:45 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function the_field() in /var/www/thek5.com/blog/wp-content/themes/thek5/header.php on line 37, referer: http://thek5.com/
+[Mon Aug 27 14:32:46 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:32:48 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function the_field() in /var/www/thek5.com/blog/wp-content/themes/thek5/header.php on line 37
+[Mon Aug 27 14:32:48 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:32:49 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function the_field() in /var/www/thek5.com/blog/wp-content/themes/thek5/header.php on line 37
+[Mon Aug 27 14:32:49 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:34:31 2012] [error] [client 127.0.0.1] PHP Fatal error:  Call to undefined function the_field() in /var/www/thek5.com/blog/wp-content/themes/thek5/header.php on line 37
+[Mon Aug 27 14:34:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:34:36 2012] [error] [client 127.0.0.1] script '/var/www/thek5.com/wp-login.php' not found or unable to stat
+[Mon Aug 27 14:34:36 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:34:42 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:34:46 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:34:47 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:34:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:18 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:22 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:36 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:46 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:47 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:35:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:36:01 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:36:04 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:36:23 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:36:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:36:30 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:06 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:08 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:09 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:16 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:18 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:21 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:22 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:24 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:41 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:43 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:45 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:47 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:37:59 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:05 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:12 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:20 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:23 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:24 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:38:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:39:34 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:39:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 14:39:44 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:42:44 2012] [error] [client 127.0.0.1] File does not exist: /var/www/favicon.ico
+[Mon Aug 27 15:42:48 2012] [error] [client 127.0.0.1] File does not exist: /var/www/favicon.ico
+[Mon Aug 27 15:43:34 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:04 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:07 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:08 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:11 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:14 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:16 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:18 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:21 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:32 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:42 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:44:43 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:45:55 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:45:59 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:50:24 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:50:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:50:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:51:05 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:51:08 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:51:09 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:51:10 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:32 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:36 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:38 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:41 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:43 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:48 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Mon Aug 27 15:52:49 2012] [error] [client 127.0.0.1] File does not exist: /var/www/thek5.com/favicon.ico
+[Tue Aug 28 13:38:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/favicon.ico
+[Tue Aug 28 18:15:58 2012] [notice] Graceful restart requested, doing restart
+apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName
+PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20090626/msql.so' - /usr/lib/php5/20090626/msql.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[Tue Aug 28 18:15:59 2012] [notice] Apache/2.2.22 (Ubuntu) PHP/5.3.10-1ubuntu3.2 with Suhosin-Patch configured -- resuming normal operations
+[Wed Aug 29 02:02:09 2012] [error] [client 127.0.0.1] File does not exist: /var/www/favicon.ico
+[Wed Aug 29 10:32:40 2012] [error] [client 127.0.0.1] File does not exist: /var/www/favicon.ico
+[Wed Aug 29 10:36:22 2012] [error] [client 127.0.0.1] File does not exist: /var/www/cloud.vaporc.com:8080, referer: http://vaporcreations.com/blog/apache2-241-error-code-list-reference
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:16:53 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:28 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:33 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:37 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 17:23:54 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/about/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:31 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Wed Aug 29 18:05:35 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:58 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:59 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:29:59 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:00 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 01:30:02 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/blog/
+[Thu Aug 30 18:05:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:26 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 18:05:27 2012] [error] [client 127.0.0.1] File does not exist: /var/www/blog, referer: http://thek5.teaklabs.com/
+[Thu Aug 30 21:50:14 2012] [error] [client 127.0.0.1] File does not exist: /var/www/favicon.ico
