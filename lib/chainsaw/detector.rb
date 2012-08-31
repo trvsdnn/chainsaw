@@ -6,7 +6,7 @@ module Chainsaw
       if time_pattern.is_a? Regexp
         time_pattern = time_pattern.source
       else
-        time_pattern = Regexp.escape(time_pattern)
+        time_pattern = Regexp.escape(time_pattern).sub(/%S/, '\d{1,2}')
       end
     end
 

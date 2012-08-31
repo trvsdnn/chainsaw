@@ -1,7 +1,7 @@
 module Chainsaw
   class CLI
     BANNER = <<-BANNER
-    Usage: chainsaw
+    Usage: chainsaw LOGFILE INTERVAL
 
     Description:
 
@@ -38,8 +38,6 @@ module Chainsaw
       end
 
       case unit
-      when 'second'
-        Time.now - count
       when 'minute'
         Time.now - (60 * count)
       when 'hour'
