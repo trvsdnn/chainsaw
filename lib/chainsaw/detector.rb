@@ -34,13 +34,13 @@ module Chainsaw
       case line
       when apache_access_pattern
         detected.type        = 'apache_access'
-        detected.time_format = '%d/%b/%Y:%H:%M:%S'
+        detected.time_format = '%d/%b/%Y:%H:%M:%%S'
       when apache_error_pattern
         detected.type        = 'apache_error'
-        detected.time_format = '%a /%b /%d %H:%M:%S %Y'
+        detected.time_format = '%a /%b /%d %H:%M:%%S %Y'
       when nginx_error_pattern
         detected.type = 'nginx_error'
-        detected.time_format = '%Y/%m/%d %H:%M:%S'
+        detected.time_format = '%Y/%m/%d %H:%M:%%S'
       end
 
       detected
