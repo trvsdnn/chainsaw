@@ -55,8 +55,6 @@ module Chainsaw
         [ m[1].to_i, m[2].sub(/s$/, '') ]
       end
 
-      puts unit.inspect
-
       case unit
       when 'minute'
         Time.now - (60 * count)

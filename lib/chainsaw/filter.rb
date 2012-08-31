@@ -15,7 +15,9 @@ module Chainsaw
         if end_at < time
           line_count += 1
 
-          if options.colorize
+          if options.output_file
+            File.open(options.output_file, 'a') { |f| f.write(line) }
+          elsif options.colorize
             puts line.sub(timestamp, "\033[32m#{timestamp}\033[0m")
           else
             puts line
@@ -23,7 +25,7 @@ module Chainsaw
         end
       end
 
-      puts "\nFound #{line_count} line(s)"
+      puts "\nFound #{line_count} line(s)" unless options.output_file
     end
   end
 end
