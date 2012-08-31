@@ -1,14 +1,5 @@
 module Chainsaw
   class Detector
-    attr_accessor :type
-    attr_accessor :time_format
-
-    def initialize
-    end
-
-    def pattern(time = Time.now)
-      self.class.send("#{type}_pattern".to_sym, time.strftime(time_format))
-    end
 
     # TODO: rename this stupid shit
     def self.time_pattern_as_regexp(time_pattern)
@@ -38,7 +29,7 @@ module Chainsaw
     end
 
     def self.detect(line)
-      detected = new
+      detected = Detected.new
 
       case line
       when apache_access_pattern
