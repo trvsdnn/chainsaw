@@ -12,6 +12,26 @@ Some sort of coloring scheme
 
 The option to put the results out to a file
 
+## What we started with
+
+    log            = File.open ('/home/josh/work/application.log')
+    starting_at    = /2012-08-28T20:00/
+    ending_at      = /2012-08-29T20:00/
+    printing       = false
+
+    log.each_line do |line|
+      if line.match(starting_at) || printing
+        puts line
+        printing = true
+      end
+
+      if line.match(ending_at)
+        puts
+        puts 'Log parse complete.'
+        break
+      end
+    end
+
 ## Installation
 
 Add this line to your application's Gemfile:
