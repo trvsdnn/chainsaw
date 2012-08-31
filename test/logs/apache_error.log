@@ -1,4 +1,3 @@
-PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20090626/msql.so' - /usr/lib/php5/20090626/msql.so: cannot open shared object file: No such file or directory in Unknown on line 0
 [Sun Aug 26 07:42:20 2012] [notice] Apache/2.2.22 (Ubuntu) PHP/5.3.10-1ubuntu3.2 with Suhosin-Patch configured -- resuming normal operations
 [Mon Aug 27 14:17:05 2012] [notice] caught SIGTERM, shutting down
 PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20090626/msql.so' - /usr/lib/php5/20090626/msql.so: cannot open shared object file: No such file or directory in Unknown on line 0
