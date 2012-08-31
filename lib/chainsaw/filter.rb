@@ -1,6 +1,8 @@
 module Chainsaw
   class Filter
-    def initialize(logfile, interval, options)
+    attr_reader :line_count
+
+    def initialize(logfile, interval, options = OpenStruct.new)
       @logfile  = logfile
       @interval = interval
       @options  = options
@@ -15,7 +17,7 @@ module Chainsaw
 
     def start
       @line_count = 0
-      end_at     = @interval
+      end_at      = @interval
 
       @log.each_line do |line|
         timestamp = line.match(@detected.pattern)[1]
