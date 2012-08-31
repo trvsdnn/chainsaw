@@ -12,14 +12,14 @@ module Chainsaw
     def self.parse_options
       @options = {}
 
-      OptionParser.new do |opts|
+      @opts = OptionParser.new do |opts|
         opts.banner = BANNER.gsub(/^ {6}/, '')
 
         opts.separator ''
         opts.separator 'Options:'
 
         opts.on('-v', 'Print the version') do
-          puts Forward::Externals::VERSION
+          puts Chainsaw::VERSION
           exit
         end
 
@@ -27,7 +27,9 @@ module Chainsaw
           puts opts
           exit
         end
-      end.parse!
+      end
+
+      @opts.parse!
     end
 
     def self.parse_interval(interval)
@@ -54,14 +56,21 @@ module Chainsaw
     end
 
     def self.validate_logfile
-      
+    end
+
+    def self.print_usage_and_exit!
+      puts @opts
+      exit
     end
 
     def self.run
       parse_options
+      print_usage_and_exit! if ARGV.empty?
+
       logfile  = ARGV.first
       interval = parse_interval(ARGV[1])
 
+      Filterer.filter(logfile, interval)
     end
   end
 end

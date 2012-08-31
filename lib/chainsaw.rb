@@ -1,3 +1,5 @@
+require 'optparse'
+
 require 'chainsaw/cli'
 require 'chainsaw/detected'
 require 'chainsaw/detector'
