@@ -1,22 +1,33 @@
 module Chainsaw
   class CLI
     BANNER = <<-BANNER
-    Usage: chainsaw LOGFILE INTERVAL
+    Usage: chainsaw LOGFILE INTERVAL [OPTIONS]
 
-    Description:
+    Description: Parses log file and returns lines matching the interval or time period you provide
 
-      TODO
-
+    Example: chainsaw access.log 1hour
     BANNER
 
     def self.parse_options
       @options = {}
 
       @opts = OptionParser.new do |opts|
-        opts.banner = BANNER.gsub(/^ {6}/, '')
+        opts.banner = BANNER.gsub(/^ {4}/, '')
 
         opts.separator ''
         opts.separator 'Options:'
+
+        opts.on('-p', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
+          @options[:pattern] = pattern
+        end
+
+        opts.on('-i', 'Work in interactive mode, one line at a time') do
+          @options[:interactive] = true
+        end
+
+        opts.on('-c', 'Colorize output (dates and patterns given)') do
+          @options[:colorize] = true
+        end
 
         opts.on('-v', 'Print the version') do
           puts Chainsaw::VERSION
@@ -36,7 +47,7 @@ module Chainsaw
       count, unit = interval.match(/^(\d+)([a-z]+)/i) do |m|
         [ m[1].to_i, m[2].sub(/s$/, '') ]
       end
-      
+
       puts unit.inspect
 
       case unit
@@ -68,9 +79,9 @@ module Chainsaw
       print_usage_and_exit! if ARGV.empty?
 
       logfile                 = ARGV.first
-      interval, interval_unit = parse_interval(ARGV[1])
+      interval = parse_interval(ARGV[1])
 
-      Filter.filter(logfile, interval, interval_unit)
+      Filter.filter(logfile, interval)
     end
   end
 end
