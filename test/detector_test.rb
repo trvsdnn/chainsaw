@@ -3,22 +3,12 @@ require 'test_helper'
 describe Chainsaw::Detector do
   Detector = Chainsaw::Detector
 
-  it 'detects a log format and returns a pattern given a Time' do
-    line         = get_log_line('apache_access.log')
-    detected     = Detector.detect(line)
-    now          = Time.now
-    # TODO: this is brittle, don't us Time.now to get away from the sub below
-    time_pattern = now.strftime(detected.time_format).sub(/%S/, '\d{1,2}')
-
-    detected.pattern(now).must_equal /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} - - \[#{time_pattern} -\d{4}\]/i
-  end
-
-  it 'detects an apache access log format' do
-    line     = get_log_line('apache_access.log')
+  it 'detects CLF log format' do
+    line     = get_log_line('clf.log')
     detected = Detector.detect(line)
 
-    detected.type.must_equal 'apache_access'
-    detected.time_format.must_equal '%d/%b/%Y:%H:%M:%%S'
+    detected.type.must_equal 'clf'
+    detected.time_format.must_equal '%d/%b/%Y:%H:%M:%S'
   end
 
   it 'detects an apache error log format' do

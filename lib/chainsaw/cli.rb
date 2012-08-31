@@ -34,10 +34,12 @@ module Chainsaw
 
     def self.parse_interval(interval)
       count, unit = interval.match(/^(\d+)([a-z]+)/i) do |m|
-        [ m[1].to_i, m[2][0..-2] ]
+        [ m[1].to_i, m[2].sub(/s$/, '') ]
       end
+      
+      puts unit.inspect
 
-      time = case unit
+      case unit
       when 'minute'
         Time.now - (60 * count)
       when 'hour'
@@ -51,8 +53,6 @@ module Chainsaw
       when 'year'
         Time.now - (31536000 * count)
       end
-
-      [ time, unit ]
     end
 
     def self.validate_logfile

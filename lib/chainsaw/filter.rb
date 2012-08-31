@@ -1,6 +1,6 @@
 module Chainsaw
   class Filter
-    def self.filter(logfile, interval, interval_unit)
+    def self.filter(logfile, interval)
       log                    = File.open(logfile)
       detected               = Detector.detect(log.first)
       end_at                 = interval
