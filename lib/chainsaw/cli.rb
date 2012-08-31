@@ -20,7 +20,7 @@ module Chainsaw
         opts.separator ''
         opts.separator 'Options:'
 
-        opts.on('-p', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
+        opts.on('-p [PATTERN]', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
           @options.pattern = pattern
         end
 
@@ -30,6 +30,10 @@ module Chainsaw
 
         opts.on('-c', 'Colorize output (dates and patterns given)') do
           @options.colorize = true
+        end
+
+        opts.on('-o [FILE]', 'Output the filtered lines to a file') do |file|
+          @options.output_file = file
         end
 
         opts.on('-v', 'Print the version') do
