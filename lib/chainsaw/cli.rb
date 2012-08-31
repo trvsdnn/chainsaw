@@ -70,7 +70,7 @@ module Chainsaw
       logfile  = ARGV.first
       interval = parse_interval(ARGV[1])
 
-      Filterer.filter(logfile, interval)
+      Filter.filter(logfile, interval)
     end
   end
 end
