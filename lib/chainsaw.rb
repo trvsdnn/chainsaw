@@ -1,3 +1,4 @@
+require 'date'
 require 'optparse'
 
 require 'chainsaw/cli'
