@@ -22,6 +22,8 @@ module Chainsaw
           else
             puts line
           end
+
+          STDIN.gets if options.interactive && !options.output_file
         end
       end
 

@@ -11,7 +11,7 @@ module Chainsaw
     def self.parse_options
       @options = OpenStruct.new({
         :interactive => false,
-        :colorize => false
+        :colorize    => false
       })
 
       @opts = OptionParser.new do |opts|
@@ -83,9 +83,10 @@ module Chainsaw
       parse_options
       print_usage_and_exit! if ARGV.empty?
 
-      logfile                 = ARGV.first
+      logfile  = ARGV.first
       interval = parse_interval(ARGV[1])
 
+      trap(:INT) { exit }
       Filter.filter(logfile, interval, @options)
     end
   end
