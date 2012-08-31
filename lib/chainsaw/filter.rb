@@ -1,24 +1,19 @@
 module Chainsaw
   class Filter
-    def self.filter(logfile, interval)
-      log         = File.open(logfile)
-      detected    = Detector.detect(log.first)
-      starting_at = detected.pattern(interval)
-      ending_at   = detected.pattern
-      printing    = false
+    def self.filter(logfile, interval, interval_unit)
+      log                    = File.open(logfile)
+      detected               = Detector.detect(log.first)
+      end_at                 = DateTime.now
+      printing               = false
 
       log.rewind
 
       log.each_line do |line|
-        if line.match(starting_at) || printing
-          puts line
-          printing = true
-        end
+        timestamp = line.match(detected.pattern)[1]
+        datetime  = DateTime.strptime(timestamp, detected.time_format)
 
-        if line.match(ending_at)
-          puts
-          puts 'Log parse complete.'
-          break
+        if datetime > end_at
+          puts line
         end
       end
     end

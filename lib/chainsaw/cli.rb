@@ -37,7 +37,7 @@ module Chainsaw
         [ m[1].to_i, m[2][0..-2] ]
       end
 
-      case unit
+      time = case unit
       when 'minute'
         Time.now - (60 * count)
       when 'hour'
@@ -51,6 +51,8 @@ module Chainsaw
       when 'year'
         Time.now - (31536000 * count)
       end
+
+      [ time, unit ]
     end
 
     def self.validate_logfile
@@ -65,10 +67,10 @@ module Chainsaw
       parse_options
       print_usage_and_exit! if ARGV.empty?
 
-      logfile  = ARGV.first
-      interval = parse_interval(ARGV[1])
+      logfile                 = ARGV.first
+      interval, interval_unit = parse_interval(ARGV[1])
 
-      Filter.filter(logfile, interval)
+      Filterer.filter(logfile, interval, interval_unit)
     end
   end
 end
