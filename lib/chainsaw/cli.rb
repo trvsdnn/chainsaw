@@ -9,7 +9,10 @@ module Chainsaw
     BANNER
 
     def self.parse_options
-      @options = {}
+      @options = OpenStruct.new({
+        :interactive => false,
+        :colorize => false
+      })
 
       @opts = OptionParser.new do |opts|
         opts.banner = BANNER.gsub(/^ {4}/, '')
@@ -18,15 +21,15 @@ module Chainsaw
         opts.separator 'Options:'
 
         opts.on('-p', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
-          @options[:pattern] = pattern
+          @options.pattern = pattern
         end
 
         opts.on('-i', 'Work in interactive mode, one line at a time') do
-          @options[:interactive] = true
+          @options.interactive = true
         end
 
         opts.on('-c', 'Colorize output (dates and patterns given)') do
-          @options[:colorize] = true
+          @options.colorize = true
         end
 
         opts.on('-v', 'Print the version') do
@@ -81,7 +84,7 @@ module Chainsaw
       logfile                 = ARGV.first
       interval = parse_interval(ARGV[1])
 
-      Filter.filter(logfile, interval)
+      Filter.filter(logfile, interval, @options)
     end
   end
 end

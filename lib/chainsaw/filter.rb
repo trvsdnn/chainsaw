@@ -1,6 +1,6 @@
 module Chainsaw
   class Filter
-    def self.filter(logfile, interval)
+    def self.filter(logfile, interval, options = {})
       log                    = File.open(logfile)
       detected               = Detector.detect(log.first)
       end_at                 = interval
@@ -13,7 +13,11 @@ module Chainsaw
         time      = DateTime.strptime(timestamp, detected.time_format).to_time
 
         if end_at < time
-          puts line
+          if options.colorize
+            puts line.sub(timestamp, "\033[32m#{timestamp}\033[0m")
+          else
+            puts line
+          end
         end
       end
 
