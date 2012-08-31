@@ -14,5 +14,4 @@ describe Chainsaw::CLI do
     time.must_equal (@now - 180)
   end
 
-
 end
