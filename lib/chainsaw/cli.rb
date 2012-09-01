@@ -50,8 +50,30 @@ module Chainsaw
       @opts.parse!
     end
 
-    def self.parse_interval(interval)
-      count, unit = interval.match(/^(\d+)([a-z]+)/i) do |m|
+    # given a period of time from now: 3hours ago up to now
+    # given a single datetime: all logs on that datetime
+    # given two datetimes: all logs between the two datetimes
+
+    def self.parse_datetime_args(args)
+      if args.length > 1
+        # TODO: this needs the same smart logic as the singular ones below
+        [ DateTime.parse(args[0]).to_time, DateTime.parse(args[0]).to_time ]
+      else
+        # TODO: rename this variable
+        time_string = args.first
+
+        if time_string =~ /^(\d+)([a-z]+)/i
+          parse_time_from_now(time_string)
+        elsif time_string =~ /t/i
+          interval_for_datetime(time_string)
+        else
+          interval_for_date(time_string)
+        end
+      end
+    end
+
+    def self.parse_time_from_now(distance)
+      count, unit = distance.match(/^(\d+)([a-z]+)/i) do |m|
         [ m[1].to_i, m[2].sub(/s$/, '') ]
       end
 
@@ -71,6 +93,36 @@ module Chainsaw
       end
     end
 
+    # time_string can be a date with or without a time
+    # if it's a date, we get all logs on that day
+    # if it's a datetime we get all logs within the hour
+    def self.interval_for_datetime(time_string)
+      if time_string =~ /t\d{2}$/i
+        starting = DateTime.parse(time_string << ':00').to_time
+        ending   = start + 3600
+      elsif time_string =~ /t\d{2}:\d{2}$/i
+        starting = DateTime.parse(time_string << ':00').to_time
+        ending   = start + 60
+      end
+
+      starting..ending
+    end
+
+    def self.interval_for_date(date_string)
+      precision = date_string.split('-').size
+
+      if precision == 2
+        # TODO: some timezone problem here
+        starting = DateTime.parse(date_string + '-01').to_time
+        ending   = Date.new(starting.year, starting.month, -1).to_time + 86399
+      elsif precision == 3
+        starting = DateTime.parse(date_string).to_time
+        ending   = starting + 86399
+      end
+
+      starting..ending
+    end
+
     def self.validate_logfile
     end
 
@@ -84,7 +136,7 @@ module Chainsaw
       print_usage_and_exit! if ARGV.empty?
 
       logfile  = ARGV.first
-      interval = parse_interval(ARGV[1])
+      interval = parse_datetime_args(ARGV[1..-1])
 
       trap(:INT) { exit }
       Filter.filter(logfile, interval, @options)

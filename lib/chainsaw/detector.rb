@@ -5,18 +5,6 @@ module Chainsaw
     APACHE_ERROR_PATTERN = /^\[[a-z]{3} [a-z]{3} \d{2} (\d{2}:\d{2}:\d{2}) \d{4}\]/i
     NGINX_ERROR_PATTERN  = /\d{4}\/\d{2}\/\d{2} (\d{2}:\d{2}:\d{2})/
 
-    # def self.apache_error_pattern(time_pattern = /^\[[a-z]{3} [a-z]{3} \d{2} \d{2}:\d{2}:\d{2} \d{4}\]/)
-    #   time_pattern = time_pattern_as_regexp(time_pattern)
-    # 
-    #   /^#{time_pattern} \[[a-z]+\]/i
-    # end
-    # 
-    # def self.nginx_error_pattern(time_pattern = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}/)
-    #   time_pattern = time_pattern_as_regexp(time_pattern)
-    # 
-    #   /^#{time_pattern} \[[a-z]+\]/i
-    # end
-
     def self.detect(line)
       detected = Detected.new
 

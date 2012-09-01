@@ -2,9 +2,9 @@ module Chainsaw
   class Filter
     attr_reader :line_count
 
-    def initialize(logfile, interval, options = OpenStruct.new)
+    def initialize(logfile, bounds, options = OpenStruct.new)
       @logfile  = logfile
-      @interval = interval
+      @bounds = bounds
       @options  = options
 
       @log = File.open(@logfile)
@@ -17,17 +17,24 @@ module Chainsaw
 
     def start
       @line_count = 0
-      end_at      = @interval
 
       @log.each_line do |line|
         filter    = @options.filter
         timestamp = line.match(@detected.pattern)[1]
         time      = DateTime.strptime(timestamp, @detected.time_format).to_time
 
-        found(line, timestamp) if end_at < time && ( !filter || filter && line.include?(filter) )
+        found(line, timestamp) if within_bounds(time) && ( !filter || filter && line.include?(filter) )
       end
 
       puts "\nFound #{@line_count} line(s)" unless @options.output_file
+    end
+
+    def within_bounds(time)
+      if @bounds.is_a? Range
+        @bounds.cover?(time)
+      else
+        @bounds < time
+      end
     end
 
     def found(line, timestamp)
