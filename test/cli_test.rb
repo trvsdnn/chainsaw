@@ -9,8 +9,8 @@ describe Chainsaw::CLI do
   end
 
   it 'parses a minute interval' do
-    singular = CLI.parse_interval('3minutes')
-    plural   = CLI.parse_interval('1minute')
+    singular = CLI.parse_time_from_now('3minutes')
+    plural   = CLI.parse_time_from_now('1minute')
 
     singular.must_be_instance_of Time
     singular.must_equal (@now - 180)

@@ -6,24 +6,24 @@ module Chainsaw
     NGINX_ERROR_PATTERN  = /\d{4}\/\d{2}\/\d{2} (\d{2}:\d{2}:\d{2})/
 
     def self.detect(line)
-      detected = Detected.new
+      format = Format.new
 
       case line
       when CLF_PATTERN
-        detected.type        = 'clf'
-        detected.time_format = '%d/%b/%Y:%H:%M:%S'
-        detected.pattern     = CLF_PATTERN
+        format.type        = 'clf'
+        format.time_format = '%d/%b/%Y:%H:%M:%S'
+        format.pattern     = CLF_PATTERN
       when APACHE_ERROR_PATTERN
-        detected.type        = 'apache_error'
-        detected.time_format = '%a /%b /%d %H:%M:%S %Y'
-        detected.pattern     = APACHE_ERROR_PATTERN
+        format.type        = 'apache_error'
+        format.time_format = '%a /%b /%d %H:%M:%S %Y'
+        format.pattern     = APACHE_ERROR_PATTERN
       when NGINX_ERROR_PATTERN
-        detected.type        = 'nginx_error'
-        detected.time_format = '%Y/%m/%d %H:%M:%S'
-        detected.pattern     = NGINX_ERROR_PATTERN
+        format.type        = 'nginx_error'
+        format.time_format = '%Y/%m/%d %H:%M:%S'
+        format.pattern     = NGINX_ERROR_PATTERN
       end
 
-      detected
+      format
     end
 
   end

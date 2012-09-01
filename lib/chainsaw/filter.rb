@@ -4,12 +4,11 @@ module Chainsaw
 
     def initialize(logfile, bounds, options = OpenStruct.new)
       @logfile  = logfile
-      @bounds = bounds
+      @bounds   = bounds
       @options  = options
-
-      @log = File.open(@logfile)
+      @log      = File.open(@logfile)
       # TODO: rename detected
-      @detected = Detector.detect(@log.first)
+      @format = Detector.detect(@log.first)
       @log.rewind
 
       self
@@ -20,8 +19,8 @@ module Chainsaw
 
       @log.each_line do |line|
         filter    = @options.filter
-        timestamp = line.match(@detected.pattern)[1]
-        time      = DateTime.strptime(timestamp, @detected.time_format).to_time
+        timestamp = line.match(@format.pattern)[1]
+        time      = DateTime.strptime(timestamp, @format.time_format).to_time
 
         found(line, timestamp) if within_bounds(time) && ( !filter || filter && line.include?(filter) )
       end

@@ -3,7 +3,7 @@ require 'ostruct'
 require 'optparse'
 
 require 'chainsaw/cli'
-require 'chainsaw/detected'
+require 'chainsaw/format'
 require 'chainsaw/detector'
 require 'chainsaw/filter'
 require 'chainsaw/version'
