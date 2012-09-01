@@ -16,7 +16,7 @@ describe Chainsaw::Detector do
     detected = Detector.detect(line)
 
     detected.type.must_equal 'apache_error'
-    detected.time_format.must_equal '%a /%b /%d %H:%M:%%S %Y'
+    detected.time_format.must_equal '%a /%b /%d %H:%M:%S %Y'
   end
 
   it 'detects an nginx error log format' do
@@ -24,7 +24,7 @@ describe Chainsaw::Detector do
     detected = Detector.detect(line)
 
     detected.type.must_equal 'nginx_error'
-    detected.time_format.must_equal '%Y/%m/%d %H:%M:%%S'
+    detected.time_format.must_equal '%Y/%m/%d %H:%M:%S'
   end
 
   def get_log_line(logfile)
