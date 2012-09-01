@@ -20,10 +20,17 @@ module Chainsaw
       end_at      = @interval
 
       @log.each_line do |line|
+        filter    = @options.filter
         timestamp = line.match(@detected.pattern)[1]
         time      = DateTime.strptime(timestamp, @detected.time_format).to_time
 
-        found(line, timestamp) if end_at < time
+        if end_at < time
+          if @options.filter && line.include?(@options.filter)
+            found(line, timestamp)
+          elsif !@options.filter
+            found(line, timestamp)
+          end
+        end
       end
 
       puts "\nFound #{@line_count} line(s)" unless @options.output_file
