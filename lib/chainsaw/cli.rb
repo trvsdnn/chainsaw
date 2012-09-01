@@ -5,7 +5,14 @@ module Chainsaw
 
     Description: Parses log file and returns lines matching the interval or time period you provide
 
-    Example: chainsaw access.log 1hour
+    Example:
+
+      > chainsaw access.log 1hour                # logs dated within one hour from now
+      > chainsaw access.log 2012-08              # logs dated within August 2012
+      > chainsaw access.log 2012-08-27           # logs dated within August 27th 2012
+      > chainsaw access.log 2012-08-27T12:00     # logs dated within the hour of 12:00 on August 27th 2012
+      > chainsaw access.log 2012-08 2012-09      # logs dated within August and September of 2012
+
     BANNER
 
     def self.parse_options
