@@ -56,8 +56,7 @@ module Chainsaw
 
     def self.parse_datetime_args(args)
       if args.length > 1
-        # TODO: this needs the same smart logic as the singular ones below
-        [ DateTime.parse(args[0]).to_time, DateTime.parse(args[0]).to_time ]
+        interval_for_date(args[0]).begin..interval_for_date(args[1]).end
       else
         # TODO: rename this variable
         time_string = args.first
