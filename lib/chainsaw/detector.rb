@@ -1,7 +1,7 @@
 module Chainsaw
   class Detector
 
-    CLF_PATTERN          = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} - - \[(\d{2}\/[a-z]{3}\/\d{4}:\d{2}:\d{2}:\d{2}) -\d{4}\]/i
+    CLF_PATTERN          = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} (?:-|[^ ]+) (?:-|[^ ]+) \[(\d{2}\/[a-z]{3}\/\d{4}:\d{2}:\d{2}:\d{2} -\d{4})\]/i
     APACHE_ERROR_PATTERN = /^\[[a-z]{3} [a-z]{3} \d{2} (\d{2}:\d{2}:\d{2}) \d{4}\]/i
     NGINX_ERROR_PATTERN  = /\d{4}\/\d{2}\/\d{2} (\d{2}:\d{2}:\d{2})/
 
@@ -11,7 +11,7 @@ module Chainsaw
       case line
       when CLF_PATTERN
         format.type        = 'clf'
-        format.time_format = '%d/%b/%Y:%H:%M:%S'
+        format.time_format = '%d/%b/%Y:%H:%M:%S %z'
         format.pattern     = CLF_PATTERN
       when APACHE_ERROR_PATTERN
         format.type        = 'apache_error'

@@ -8,7 +8,7 @@ describe Chainsaw::Detector do
     detected = Detector.detect(line)
 
     detected.type.must_equal 'clf'
-    detected.time_format.must_equal '%d/%b/%Y:%H:%M:%S'
+    detected.time_format.must_equal '%d/%b/%Y:%H:%M:%S %z'
   end
 
   it 'detects an apache error log format' do

@@ -35,7 +35,7 @@ describe Chainsaw::Filter do
 
     out, err = capture_io {filter.start}
     line     = out.split("\n").first
-    line.must_equal %Q{127.0.0.1 - - [\e[32m30/Aug/2012:15:00:28\e[0m -0400] "HEAD / HTTP/1.1" 200 338 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19"}
+    line.must_equal %Q{127.0.0.1 - - [\e[32m30/Aug/2012:15:00:28 -0400\e[0m] "HEAD / HTTP/1.1" 200 338 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19"}
   end
 
   it 'goes interactive' do
