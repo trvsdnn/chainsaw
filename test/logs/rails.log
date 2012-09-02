@@ -1,0 +1,249 @@
+Started GET "/signup" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+Processing by RegistrationsController#new as HTML
+  Rendered shared/_user_error_messages.html.erb (0.0ms)
+MONGODB (0ms) example['plans'].find({})
+  Rendered registrations/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 16.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/account.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/billing.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-01 09:34:35 -0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+Processing by RegistrationsController#new as HTML
+  Rendered shared/_user_error_messages.html.erb (0.0ms)
+MONGODB (0ms) example['plans'].find({})
+  Rendered registrations/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.1ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/account.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/billing.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-01 10:39:35 -0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+Processing by RegistrationsController#new as HTML
+  Rendered shared/_user_error_messages.html.erb (0.0ms)
+MONGODB (0ms) example['plans'].find({})
+  Rendered registrations/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/account.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/billing.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+Processing by RegistrationsController#new as HTML
+  Rendered shared/_user_error_messages.html.erb (0.0ms)
+MONGODB (0ms) example['plans'].find({})
+  Rendered registrations/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 21.4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/account.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/billing.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:36 -0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+Processing by RegistrationsController#new as HTML
+  Rendered shared/_user_error_messages.html.erb (0.0ms)
+MONGODB (0ms) example['plans'].find({})
+  Rendered registrations/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/billing.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/account.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/invitations.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/registrations.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-01 11:39:37 -0400
+
+
+Started GET "/plans" for 127.0.0.1 at 2012-09-01 11:39:46 -0400
+Processing by PagesController#plans as HTML
+  Rendered pages/plans.html.erb (76.8ms)
+Completed 500 Internal Server Error in 79ms
+
+ActionView::Template::Error (undefined method `new_account_path' for #<#<Class:0x007f8d0c4194e8>:0x007f8d0c11c290>):
+    9:       <li>blah blah</li>
+    10:       <li>blah blah</li>
+    11:     </ul>
+    12:     <%= link_to 'Signup', new_account_path %>
+    13:   </div>
+    14: 
+    15:   <div class='span3 offset1'>
+  app/views/pages/plans.html.erb:12:in `_app_views_pages_plans_html_erb___1166424239032441799_70121884801200'
+
+
+  Rendered /Users/user/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/user/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/user/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.9ms)

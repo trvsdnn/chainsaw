@@ -60,7 +60,7 @@ module Chainsaw
     # given a period of time from now: 3hours ago up to now
     # given a single datetime: all logs on that datetime
     # given two datetimes: all logs between the two datetimes
-
+    # TODO: when datetime is converted to time, the hours are shifted based on the timezone offset
     def self.parse_datetime_args(args)
       if args.length > 1
         interval_for_date(args[0]).begin..interval_for_date(args[1]).end
@@ -104,11 +104,11 @@ module Chainsaw
     # if it's a datetime we get all logs within the hour
     def self.interval_for_datetime(time_string)
       if time_string =~ /t\d{2}$/i
-        starting = DateTime.parse(time_string << ':00').to_time
-        ending   = start + 3600
+        starting = DateTime.parse(time_string + ':00').to_time
+        ending   = starting + 3600
       elsif time_string =~ /t\d{2}:\d{2}$/i
-        starting = DateTime.parse(time_string << ':00').to_time
-        ending   = start + 60
+        starting = DateTime.parse(time_string + ':00').to_time
+        ending   = starting + 60
       end
 
       starting..ending
@@ -127,6 +127,10 @@ module Chainsaw
       end
 
       starting..ending
+    end
+
+    def self.normalize_time(time)
+      # TODO: implement this
     end
 
     def self.validate_logfile

@@ -35,6 +35,14 @@ describe Chainsaw::Detector do
     format.time_format.must_equal '%Y-%m-%dT%H:%M:%S'
   end
 
+  it 'detects an rails log format' do
+    line     = get_log_line('rails.log')
+    format = Detector.detect(line)
+
+    format.type.must_equal 'rails'
+    format.time_format.must_equal '%Y-%m-%d %H:%M:%S %z'
+  end
+
   def get_log_line(logfile)
     logfile = File.expand_path("../logs/#{logfile}", __FILE__)
     File.open(logfile).first
