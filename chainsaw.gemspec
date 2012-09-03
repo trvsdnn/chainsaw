@@ -15,6 +15,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.version       = Chainsaw::VERSION
 
+  gem.add_dependency 'chronic', '~> 0.7.0'
+
   gem.add_development_dependency 'minitest', '~> 3.0.0'
   gem.add_development_dependency 'mocha', '~> 0.11.4'
 end

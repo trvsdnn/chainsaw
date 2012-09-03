@@ -1,5 +1,6 @@
 module Chainsaw
   class CLI
+    CHRONIC_OPTIONS = { :context => :past, :guess => false }
     BANNER = <<-BANNER
     Usage: chainsaw LOGFILE INTERVAL [OPTIONS]
 
@@ -7,7 +8,7 @@ module Chainsaw
 
     Example:
 
-      > chainsaw access.log 1hour                # logs dated within one hour from now
+      > chainsaw access.log 1 hour ago           # logs entries within one hour from now
       > chainsaw access.log 2012-08              # logs dated within August 2012
       > chainsaw access.log 2012-08-27           # logs dated within August 27th 2012
       > chainsaw access.log 2012-08-27T12:00     # logs dated within the hour of 12:00 on August 27th 2012
@@ -57,80 +58,17 @@ module Chainsaw
       @opts.parse!
     end
 
-    # given a period of time from now: 3hours ago up to now
-    # given a single datetime: all logs on that datetime
-    # given two datetimes: all logs between the two datetimes
-    # TODO: when datetime is converted to time, the hours are shifted based on the timezone offset
-    def self.parse_datetime_args(args)
-      if args.length > 1
-        interval_for_date(args[0]).begin..interval_for_date(args[1]).end
+    def self.parse_time_args(args)
+      delimiter = args.index('-')
+
+      if delimiter
+        starting = Chronic.parse(args[0..(delimiter - 1)].join(' '), CHRONIC_OPTIONS).begin
+        ending   = Chronic.parse(args[(delimiter + 1)..-1].join(' '), CHRONIC_OPTIONS).begin
+
+        starting..ending
       else
-        # TODO: rename this variable
-        time_string = args.first
-
-        if time_string =~ /^(\d+)([a-z]+)/i
-          parse_time_from_now(time_string)
-        elsif time_string =~ /t/i
-          interval_for_datetime(time_string)
-        else
-          interval_for_date(time_string)
-        end
+        Chronic.parse(args.join(' '), CHRONIC_OPTIONS).begin
       end
-    end
-
-    def self.parse_time_from_now(distance)
-      count, unit = distance.match(/^(\d+)([a-z]+)/i) do |m|
-        [ m[1].to_i, m[2].sub(/s$/, '') ]
-      end
-
-      case unit
-      when 'minute'
-        Time.now - (60 * count)
-      when 'hour'
-        Time.now - (3600 * count)
-      when 'day'
-        Time.now - (86400 * count)
-      when 'week'
-        Time.now - (604800 * count)
-      when 'month'
-        Time.now - (2592000 * count)
-      when 'year'
-        Time.now - (31536000 * count)
-      end
-    end
-
-    # time_string can be a date with or without a time
-    # if it's a date, we get all logs on that day
-    # if it's a datetime we get all logs within the hour
-    def self.interval_for_datetime(time_string)
-      if time_string =~ /t\d{2}$/i
-        starting = DateTime.parse(time_string + ':00').to_time
-        ending   = starting + 3600
-      elsif time_string =~ /t\d{2}:\d{2}$/i
-        starting = DateTime.parse(time_string + ':00').to_time
-        ending   = starting + 60
-      end
-
-      starting..ending
-    end
-
-    def self.interval_for_date(date_string)
-      precision = date_string.split('-').size
-
-      if precision == 2
-        # TODO: some timezone problem here
-        starting = DateTime.parse(date_string + '-01').to_time
-        ending   = Date.new(starting.year, starting.month, -1).to_time + 86399
-      elsif precision == 3
-        starting = DateTime.parse(date_string).to_time
-        ending   = starting + 86399
-      end
-
-      starting..ending
-    end
-
-    def self.normalize_time(time)
-      # TODO: implement this
     end
 
     def self.validate_logfile
@@ -145,8 +83,8 @@ module Chainsaw
       parse_options
       print_usage_and_exit! if ARGV.empty?
 
-      logfile  = ARGV.first
-      interval = parse_datetime_args(ARGV[1..-1])
+      logfile = ARGV.first
+      time    = parse_time_args(ARGV[1..-1])
 
       trap(:INT) { exit }
       Filter.filter(logfile, interval, @options)

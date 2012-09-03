@@ -2,6 +2,8 @@ require 'date'
 require 'ostruct'
 require 'optparse'
 
+require 'chronic'
+
 require 'chainsaw/cli'
 require 'chainsaw/format'
 require 'chainsaw/detector'

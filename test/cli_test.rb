@@ -4,18 +4,16 @@ describe Chainsaw::CLI do
   CLI = Chainsaw::CLI
 
   before do
-    @now = Time.at(234920834)
-    Time.expects(:now).at_least_once.returns(@now)
   end
 
-  it 'parses a minute interval' do
-    singular = CLI.parse_time_from_now('3minutes')
-    plural   = CLI.parse_time_from_now('1minute')
+  it 'parses time as a single time if given without hyphen' do
+    time = CLI.parse_time_args(['4:00'])
+    time.must_be_kind_of Time
+  end
 
-    singular.must_be_instance_of Time
-    singular.must_equal (@now - 180)
-    plural.must_be_instance_of Time
-    plural.must_equal (@now - 60)
+  it 'parses time as a range if time args delimited by a hyphen' do
+    time = CLI.parse_time_args(['4:00', '-', '5:00'])
+    time.must_be_kind_of Range
   end
 
 end
