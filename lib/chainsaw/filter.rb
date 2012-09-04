@@ -2,20 +2,29 @@ module Chainsaw
   class Filter
     attr_reader :line_count
 
+    # Initialize a Filter instance. We read the logfile here and
+    # attempt to detect what type of logfile it is.
+    #
+    # logfile - the String path of the logfile to be filtered
+    # bounds  - the "time" period to filter through (Time or Range)
+    # options - an OpenStruct representing the options
+    #
+    # Returns the Filter instance
     def initialize(logfile, bounds, options = OpenStruct.new)
-      @logfile  = logfile
-      @bounds   = bounds
-      @options  = options
-      @log      = File.open(@logfile)
-      @format = Detector.detect(@log.first)
+      @logfile    = logfile
+      @bounds     = bounds
+      @options    = options
+      @log        = File.open(@logfile)
+      @format     = Detector.detect(@log.first)
+      @line_count = 0
+
       @log.rewind
 
       self
     end
 
+    # Start iterating through the log lines and filtering them accordingly.
     def start
-      @line_count = 0
-
       @log.each_line do |line|
         filter    = @options.filter
         match     = line.match(@format.pattern)
@@ -27,10 +36,13 @@ module Chainsaw
           timestamp = time = nil
         end
 
-        if match && within_bounds(time) && ( !filter || filter && line.include?(filter) )
+        # a match was found if we are filtering additional text, check that too
+        if match && within_bounds?(time) && ( !filter || filter && line.include?(filter) )
           found(line, timestamp)
+        # a match was found and we are outputting non-timestamped lines
         elsif match && @outputting
           @outputting = false
+        # outputting non-timestamped lines
         elsif @outputting
           out(line)
         end
@@ -39,7 +51,13 @@ module Chainsaw
       puts "\nFound #{@line_count} line(s)" unless @options.output_file
     end
 
-    def within_bounds(time)
+    # Check to see if the parsed Time is within the bounds
+    # of our given Time or time Range.
+    #
+    # time - the parsed Time from the logline
+    #
+    # Returns true if within bounds
+    def within_bounds?(time)
       if @bounds.is_a? Range
         @bounds.cover?(time)
       else
@@ -47,6 +65,11 @@ module Chainsaw
       end
     end
 
+    # A matching line was found, set @outputting incase we
+    # run into lines that aren't timestamped.
+    #
+    # line - the String logline
+    # timestamp - the String timestamp from the logline
     def found(line, timestamp)
       @outputting = true
       @line_count += 1
@@ -56,6 +79,10 @@ module Chainsaw
       STDIN.gets if @options.interactive && !@options.output_file
     end
 
+    # Output the logline to STDOUT or File. We also colorize if requested.
+    #
+    # line - the String logline
+    # timestamp - the String timestamp from the logline
     def out(line, timestamp = nil)
       if @options.output_file
         File.open(@options.output_file, 'a') { |f| f.write(line) }
@@ -66,6 +93,14 @@ module Chainsaw
       end
     end
 
+    # Parse a timestamp using the given time_format. If a timezone
+    # isn't included in the timestamp, we'll set it to the current local
+    # timezone
+    #
+    # timestamp - the String timestamp
+    # time_format - the String time format used to parse
+    #
+    # Returns the parsed Time object
     def self.parse_timestamp(timestamp, time_format)
       if time_format.include?('%z')
         DateTime.strptime(timestamp, time_format).to_time
@@ -78,6 +113,8 @@ module Chainsaw
       end
     end
 
+    # A convinence method to initialize a Filter object using the
+    # given args and start filtering it
     def self.filter(*args)
       new(*args).start
     end

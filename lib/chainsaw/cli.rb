@@ -25,6 +25,8 @@ module Chainsaw
 
     BANNER
 
+    # Use OptionParser to parse options, then we remove them from
+    # ARGV to help ensure we're parsing times correctly
     def self.parse_options
       @options = OpenStruct.new({
         :interactive => false,
@@ -67,6 +69,12 @@ module Chainsaw
       @opts.parse!
     end
 
+    # Check the leftover arguments to see if we're given a range or not.
+    # If we have a range, parse them, if not, parse the single time arguments.
+    #
+    # args - an Array of String arguments
+    #
+    # Returns a Time object or Range representing the requested time
     def self.parse_time_args(args)
       delimiter = args.index('-')
 
@@ -88,6 +96,8 @@ module Chainsaw
       exit
     end
 
+    # Called from the executable. Parses the command line arguments
+    # and passes them through to Filter.
     def self.run
       parse_options
       print_usage_and_exit! if ARGV.empty?
