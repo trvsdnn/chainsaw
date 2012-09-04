@@ -87,6 +87,10 @@ module Chainsaw
       end
       
       starting..ending
+      
+    rescue
+      puts "\033[31mUnable to parse `#{args.join(' ')}'. Check \033[0m\033[4mhttps://github.com/mojombo/chronic\033[0m\033[31m to see time formats that chronic supports.\033[32m"
+      exit
     end
 
     def self.print_usage_and_exit!
