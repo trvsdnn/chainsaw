@@ -21,7 +21,7 @@ be found here: https://github.com/mojombo/chronic
     # You can use a hypen to specify a time range (you can mix and match formats)
 
     > chainsaw access.log 2012-08-01 - 2012-09-17     # entries within August 1st and September 17th
-    > chainsaw access.log august - yesterday          # entries within August and September
+    > chainsaw access.log july - yesterday            # entries within July and yesterday
 
 ## Features
 
