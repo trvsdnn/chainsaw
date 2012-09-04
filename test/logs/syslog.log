@@ -1,29 +1,29 @@
-Aug  1 17:36:55 muspelheim kernel: [519156.511540] UDF-fs: Partition marked readonly; forcing readonly mount
-Aug  9 17:36:55 muspelheim kernel: [519156.527593] UDF-fs: INFO Mounting volume '', timestamp 2006/09/04 05:14 (1f10)
-Aug 26 19:09:13 muspelheim kernel: [524694.010066] gnome-shell[1766] trap int3 ip:7f0aa38d6fdb sp:7ffff13ee210 error:0
-Aug 27 15:16:25 muspelheim kernel: [597126.165437] EXT4-fs (sdb6): Unaligned AIO/DIO on inode 2490305 by VirtualBox; performance will be poor.
-Aug 27 15:18:39 muspelheim kernel: [597260.513161] device eth1 entered promiscuous mode
-Aug 27 15:19:07 muspelheim kernel: [597287.888586] device eth1 left promiscuous mode
-Aug 27 15:19:08 muspelheim kernel: [597288.840206] vboxnetflt: dropped 0 out of 108 packets
-Aug 27 15:19:08 muspelheim kernel: [597288.870127] vboxnetflt: dropped 0 out of 0 packets
-Aug 27 15:19:18 muspelheim kernel: [597299.145176] device eth1 entered promiscuous mode
-Aug 27 16:38:49 muspelheim kernel: [602070.406491] device eth1 left promiscuous mode
-Aug 27 16:38:50 muspelheim kernel: [602070.903442] vboxnetflt: dropped 1017 out of 62608 packets
-Aug 28 18:16:40 muspelheim kernel: [694341.478308] init: mongodb main process (1181) terminated with status 12
-Aug 28 18:23:17 muspelheim kernel: [694738.296538] type=1400 audit(1346192597.536:26): apparmor="STATUS" operation="profile_replace" name="/usr/lib/telepathy/mission-control-5" pid=14487 comm="apparmor_parser"
-Aug 28 18:23:17 muspelheim kernel: [694738.296801] type=1400 audit(1346192597.536:27): apparmor="STATUS" operation="profile_replace" name="/usr/lib/telepathy/telepathy-*" pid=14487 comm="apparmor_parser"
-Aug 28 18:25:58 muspelheim kernel: [694899.747857] device eth1 entered promiscuous mode
-Aug 28 18:27:17 muspelheim kernel: [694977.916831] EXT4-fs (sdb6): Unaligned AIO/DIO on inode 3276897 by VirtualBox; performance will be poor.
-Aug 28 18:27:17 muspelheim kernel: [694977.928282] device eth1 left promiscuous mode
-Aug 28 18:27:20 muspelheim kernel: [694981.044069] vboxnetflt: dropped 0 out of 1260 packets
-Aug 28 18:27:40 muspelheim kernel: [695001.015865] device eth1 entered promiscuous mode
-Aug 29 23:01:12 muspelheim kernel: [797813.489426] EXT4-fs (sdb6): Unaligned AIO/DIO on inode 3276897 by VirtualBox; performance will be poor.
-Aug 29 23:01:12 muspelheim kernel: [797813.501063] device eth1 left promiscuous mode
-Aug 29 23:01:14 muspelheim kernel: [797815.636073] vboxnetflt: dropped 0 out of 1658435 packets
-Aug 30 12:12:24 muspelheim kernel: [845285.335141] r8169 0000:02:00.0: eth1: link down
-Aug 30 12:12:26 muspelheim kernel: [845287.549804] r8169 0000:02:00.0: eth1: link up
-Aug 30 12:26:45 muspelheim kernel: [846146.371234] r8169 0000:02:00.0: eth1: link down
-Aug 30 12:26:50 muspelheim kernel: [846151.120878] ADDRCONF(NETDEV_UP): eth1: link is not ready
-Aug 30 12:27:22 muspelheim kernel: [846183.129496] r8169 0000:02:00.0: eth1: link up
-Aug 30 12:27:22 muspelheim kernel: [846183.130073] ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready
-Aug 30 12:27:32 muspelheim kernel: [846193.560089] eth1: no IPv6 routers present
+Aug  1 17:36:55 localhost kernel: [519156.511540] UDF-fs: Partition marked readonly; forcing readonly mount
+Aug  9 17:36:55 localhost kernel: [519156.527593] UDF-fs: INFO Mounting volume '', timestamp 2006/09/04 05:14 (1f10)
+Aug 26 19:09:13 localhost kernel: [524694.010066] gnome-shell[1766] trap int3 ip:7f0aa38d6fdb sp:7ffff13ee210 error:0
+Aug 27 15:16:25 localhost kernel: [597126.165437] EXT4-fs (sdb6): Unaligned AIO/DIO on inode 2490305 by VirtualBox; performance will be poor.
+Aug 27 15:18:39 localhost kernel: [597260.513161] device eth1 entered promiscuous mode
+Aug 27 15:19:07 localhost kernel: [597287.888586] device eth1 left promiscuous mode
+Aug 27 15:19:08 localhost kernel: [597288.840206] vboxnetflt: dropped 0 out of 108 packets
+Aug 27 15:19:08 localhost kernel: [597288.870127] vboxnetflt: dropped 0 out of 0 packets
+Aug 27 15:19:18 localhost kernel: [597299.145176] device eth1 entered promiscuous mode
+Aug 27 16:38:49 localhost kernel: [602070.406491] device eth1 left promiscuous mode
+Aug 27 16:38:50 localhost kernel: [602070.903442] vboxnetflt: dropped 1017 out of 62608 packets
+Aug 28 18:16:40 localhost kernel: [694341.478308] init: mongodb main process (1181) terminated with status 12
+Aug 28 18:23:17 localhost kernel: [694738.296538] type=1400 audit(1346192597.536:26): apparmor="STATUS" operation="profile_replace" name="/usr/lib/telepathy/mission-control-5" pid=14487 comm="apparmor_parser"
+Aug 28 18:23:17 localhost kernel: [694738.296801] type=1400 audit(1346192597.536:27): apparmor="STATUS" operation="profile_replace" name="/usr/lib/telepathy/telepathy-*" pid=14487 comm="apparmor_parser"
+Aug 28 18:25:58 localhost kernel: [694899.747857] device eth1 entered promiscuous mode
+Aug 28 18:27:17 localhost kernel: [694977.916831] EXT4-fs (sdb6): Unaligned AIO/DIO on inode 3276897 by VirtualBox; performance will be poor.
+Aug 28 18:27:17 localhost kernel: [694977.928282] device eth1 left promiscuous mode
+Aug 28 18:27:20 localhost kernel: [694981.044069] vboxnetflt: dropped 0 out of 1260 packets
+Aug 28 18:27:40 localhost kernel: [695001.015865] device eth1 entered promiscuous mode
+Aug 29 23:01:12 localhost kernel: [797813.489426] EXT4-fs (sdb6): Unaligned AIO/DIO on inode 3276897 by VirtualBox; performance will be poor.
+Aug 29 23:01:12 localhost kernel: [797813.501063] device eth1 left promiscuous mode
+Aug 29 23:01:14 localhost kernel: [797815.636073] vboxnetflt: dropped 0 out of 1658435 packets
+Aug 30 12:12:24 localhost kernel: [845285.335141] r8169 0000:02:00.0: eth1: link down
+Aug 30 12:12:26 localhost kernel: [845287.549804] r8169 0000:02:00.0: eth1: link up
+Aug 30 12:26:45 localhost kernel: [846146.371234] r8169 0000:02:00.0: eth1: link down
+Aug 30 12:26:50 localhost kernel: [846151.120878] ADDRCONF(NETDEV_UP): eth1: link is not ready
+Aug 30 12:27:22 localhost kernel: [846183.129496] r8169 0000:02:00.0: eth1: link up
+Aug 30 12:27:22 localhost kernel: [846183.130073] ADDRCONF(NETDEV_CHANGE): eth1: link becomes ready
+Aug 30 12:27:32 localhost kernel: [846193.560089] eth1: no IPv6 routers present

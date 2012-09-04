@@ -1,16 +1,16 @@
-[2012-02-04 04:08:52] kiwi - - [04/Jul/2012:04:08:52 EDT] "GET /production/file_metadata/modules/base/git_completion.sh? HTTP/1.1" 200 310
+[2012-02-04 04:08:52] example - - [04/Jul/2012:04:08:52 EDT] "GET /production/file_metadata/modules/base/git_completion.sh? HTTP/1.1" 200 310
 [2012-02-06 04:08:52] - -> /production/file_metadata/modules/base/git_completion.sh?
-[2012-07-04 04:08:52] kiwi - - [04/Jul/2012:04:08:52 EDT] "GET /production/file_metadata/modules/nodejs/node.sh? HTTP/1.1" 200 302
+[2012-07-04 04:08:52] example - - [04/Jul/2012:04:08:52 EDT] "GET /production/file_metadata/modules/nodejs/node.sh? HTTP/1.1" 200 302
 [2012-07-04 04:08:52] - -> /production/file_metadata/modules/nodejs/node.sh?
-[2012-07-04 04:08:53] kiwi - - [04/Jul/2012:04:08:53 EDT] "GET /production/file_metadata/modules/ruby/ruby.sh? HTTP/1.1" 200 300
+[2012-07-04 04:08:53] example - - [04/Jul/2012:04:08:53 EDT] "GET /production/file_metadata/modules/ruby/ruby.sh? HTTP/1.1" 200 300
 [2012-07-04 04:08:53] - -> /production/file_metadata/modules/ruby/ruby.sh?
-[2012-07-04 04:08:54] kiwi - - [04/Jul/2012:04:08:54 EDT] "GET /production/file_metadata/modules/papertrail-logger/papertrail? HTTP/1.1" 200 316
+[2012-07-04 04:08:54] example - - [04/Jul/2012:04:08:54 EDT] "GET /production/file_metadata/modules/papertrail-logger/papertrail? HTTP/1.1" 200 316
 [2012-07-04 04:08:54] - -> /production/file_metadata/modules/papertrail-logger/papertrail?
-[2012-07-04 04:08:55] kiwi - - [04/Jul/2012:04:08:55 EDT] "GET /production/file_metadata/modules/base/aliases.sh? HTTP/1.1" 200 303
+[2012-07-04 04:08:55] example - - [04/Jul/2012:04:08:55 EDT] "GET /production/file_metadata/modules/base/aliases.sh? HTTP/1.1" 200 303
 [2012-07-04 04:08:55] - -> /production/file_metadata/modules/base/aliases.sh?
-[2012-07-04 04:08:55] kiwi - - [04/Jul/2012:04:08:55 EDT] "GET /production/file_metadata/modules/base/gemrc? HTTP/1.1" 200 298
+[2012-07-04 04:08:55] example - - [04/Jul/2012:04:08:55 EDT] "GET /production/file_metadata/modules/base/gemrc? HTTP/1.1" 200 298
 [2012-07-04 04:08:55] - -> /production/file_metadata/modules/base/gemrc?
-[2012-07-04 04:08:55] kiwi - - [04/Jul/2012:04:08:55 EDT] "GET /production/file_metadata/modules/base/irbrc? HTTP/1.1" 200 298
+[2012-07-04 04:08:55] example - - [04/Jul/2012:04:08:55 EDT] "GET /production/file_metadata/modules/base/irbrc? HTTP/1.1" 200 298
 [2012-07-04 04:08:55] - -> /production/file_metadata/modules/base/irbrc?
-[2012-07-04 04:08:56] kiwi - - [04/Jul/2012:04:08:56 EDT] "PUT /production/report/kiwi HTTP/1.1" 200 14
-[2012-07-04 04:08:56] - -> /production/report/kiwi
+[2012-07-04 04:08:56] example - - [04/Jul/2012:04:08:56 EDT] "PUT /production/report/example HTTP/1.1" 200 14
+[2012-07-04 04:08:56] - -> /production/report/example
