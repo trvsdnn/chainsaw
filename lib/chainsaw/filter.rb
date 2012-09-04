@@ -15,7 +15,7 @@ module Chainsaw
       @bounds     = bounds
       @options    = options
       @log        = File.open(@logfile)
-      @format     = Detector.detect(@log.first)
+      @format     = Detector.detect(@log)
       @line_count = 0
 
       @log.rewind

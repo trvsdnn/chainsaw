@@ -14,7 +14,23 @@ module Chainsaw
     PYTHON_PATTERN       = /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})/i
     DJANGO_PATTERN       = /^\[(\d{2}\/[a-z]{3}\/\d{4} \d{2}:\d{2}:\d{2})\]/i
 
-    def self.detect(line)
+    def self.detect(log)
+      format = nil
+
+      log.each_line do |line|
+        format = _detect(line)
+        break unless format.type.nil?
+      end
+
+      if format.nil?
+        puts "\033[31mUnable to determine log format :(\033[0m"
+        exit
+      else
+        format
+      end
+    end
+
+    def self._detect(line)
       format = Format.new
 
       case line
