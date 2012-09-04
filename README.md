@@ -1,6 +1,6 @@
 # Chainsaw
 
-Parses a log file and returns lines matching the time period provided.
+Parses a log file and returns lines matching the time period provided. Chainsaw tries to be smart about determining the log format and parsing it accordingly. See the list of currently supported formats below.
 
 Chronic is used to parse the time strings, so any format chronic
 supports, chainsaw supports. A list of supported formats can
@@ -48,7 +48,7 @@ Chainsaw will output the found log lines to a file on the system if you specify 
 
     > chainsaw access.log yesterday -o yesterday.log
     
-## Supported log formats (we think anyway)
+## Supported log formats (we think)
 
 * syslog
 * apache/nginx access (CLF)
