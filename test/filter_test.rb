@@ -31,7 +31,7 @@ describe Chainsaw::Filter do
     filter.line_count.must_equal 13
   end
 
-  it 'finds the correct number of lines given an interval and pattern' do
+  it 'finds the correct number of lines given an interval and an additional text filter' do
     logfile = File.expand_path('../logs/clf.log', __FILE__)
     # stub out an interval of 11 hours from the last log entry
     time    = Time.local(2012, 8, 30, 10, 51, 05)

@@ -39,8 +39,8 @@ module Chainsaw
         opts.separator ''
         opts.separator 'Options:'
 
-        opts.on('-f [PATTERN]', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
-          @options.pattern = pattern
+        opts.on('-f [FILTER]', 'Provide a regexp pattern to match on as well as the interval given') do |filter|
+          @options.filter = filter
         end
 
         opts.on('-i', 'Work in interactive mode, one line at a time') do

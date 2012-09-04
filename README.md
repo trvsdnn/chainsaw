@@ -26,7 +26,7 @@ be found here: https://github.com/mojombo/chronic
 
 ### Additional text filter
 
-You can specify an additional simple text pattern to filter on top of the time arguments with the `-f` option.
+You can specify an additional simple text pattern to filter (in addition to the time arguments) with the `-f` option.
 
     > chainsaw access.log -f GET 1 hour ago
 
