@@ -9,7 +9,7 @@ describe Chainsaw::Filter do
   it 'finds the correct number of lines given an interval' do
     logfile = File.expand_path('../logs/clf.log', __FILE__)
     # stub out an interval of 11 hours from the last log entry
-    time    = Time.new(2012, 8, 30, 10, 51, 05)
+    time    = Time.local(2012, 8, 30, 10, 51, 05)
     filter  = Filter.new(logfile, time)
 
     capture_io { filter.start }
@@ -19,8 +19,8 @@ describe Chainsaw::Filter do
   it 'handles non-matching lines if occuring between the bounds' do
     logfile = File.expand_path('../logs/rails.log', __FILE__)
     # stub out a 1 hour range
-    starting  = Time.new(2012, 9, 1, 10, 30, 00, '-04:00')
-    ending    = Time.new(2012, 9, 1, 11, 30, 00, '-04:00')
+    starting  = Time.local(2012, 9, 1, 10, 30, 00)
+    ending    = Time.local(2012, 9, 1, 11, 30, 00)
     filter    = Filter.new(logfile, starting..ending)
 
     out, err = capture_io { filter.start }
@@ -31,30 +31,10 @@ describe Chainsaw::Filter do
     filter.line_count.must_equal 13
   end
 
-  it 'finds the correct number of lines given a month' do
-    skip
-  end
-
-  it 'finds the correct number of lines given a month and day' do
-    skip
-  end
-
-  it 'finds the correct number of lines given a date and hour' do
-    skip
-  end
-
-  it 'finds the correct number of lines given a date, hour, and minute' do
-    skip
-  end
-
-  it 'finds the correct number of lines given a date range' do
-    skip
-  end
-
   it 'finds the correct number of lines given an interval and pattern' do
     logfile = File.expand_path('../logs/clf.log', __FILE__)
     # stub out an interval of 11 hours from the last log entry
-    time    = Time.new(2012, 8, 30, 10, 51, 05)
+    time    = Time.local(2012, 8, 30, 10, 51, 05)
     options = OpenStruct.new(:filter => 'green_bullet')
     filter  = Filter.new(logfile, time, options)
 
@@ -64,7 +44,7 @@ describe Chainsaw::Filter do
 
   it 'colorizes matching lines' do
     logfile = File.expand_path('../logs/clf.log', __FILE__)
-    time    = Time.new(2012, 8, 30, 10, 51, 05)
+    time    = Time.local(2012, 8, 30, 10, 51, 05)
     options = OpenStruct.new(:colorize => true)
     filter  = Filter.new(logfile, time, options)
 
@@ -75,7 +55,7 @@ describe Chainsaw::Filter do
 
   it 'goes interactive' do
     logfile = File.expand_path('../logs/clf.log', __FILE__)
-    time    = Time.new(2012, 8, 30, 10, 51, 05)
+    time    = Time.local(2012, 8, 30, 10, 51, 05)
     options = OpenStruct.new(:interactive => true)
     filter  = Filter.new(logfile, time, options)
 
@@ -85,7 +65,7 @@ describe Chainsaw::Filter do
 
   it 'outputs to a file' do
     logfile     = File.expand_path('../logs/clf.log', __FILE__)
-    time    = Time.new(2012, 8, 30, 10, 51, 05)
+    time    = Time.local(2012, 8, 30, 10, 51, 05)
     output_file = File.expand_path('../logs/output.log', __FILE__)
     options     = OpenStruct.new(:output_file => output_file)
     filter      = Filter.new(logfile, time, options)
