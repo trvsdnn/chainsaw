@@ -1,7 +1,5 @@
 # Chainsaw
 
-## Features
-
 Parses a log file and returns lines matching the time period provided.
 
 Chronic is used to parse the time strings, so any format chronic
