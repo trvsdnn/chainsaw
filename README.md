@@ -34,7 +34,7 @@ You can specify an additional simple text pattern to filter on top of the time a
 
 You can have chainsaw colorize the timestamp for easy scanning with the `-c` option.
 
-    > chainsaw access.log -c GET 1 hour ago
+    > chainsaw access.log -c 1 hour ago
     
 ### Interactive mode
 
