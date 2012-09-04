@@ -2,48 +2,53 @@
 
 ## Features
 
-Give a timeframe, an hour ago, three weeks ago, etc, and return all log entries from then to now 
+Parses a log file and returns lines matching the time period provided.
 
-Give a date range, August 1 - August 5, and return the long entries from the first date to the second date
-
-Use the timeframe or date range, give a search term, and only return the log lines that contain the search word
-
-Some sort of coloring scheme
-
-The option to put the results out to a file
-
-## What we started with
-
-    log            = File.open ('/home/josh/work/application.log')
-    starting_at    = /2012-08-28T20:00/
-    ending_at      = /2012-08-29T20:00/
-    printing       = false
-
-    log.each_line do |line|
-      if line.match(starting_at) || printing
-        puts line
-        printing = true
-      end
-
-      if line.match(ending_at)
-        puts
-        puts 'Log parse complete.'
-        break
-      end
-    end
+Chronic is used to parse the time strings, so any format chronic
+supports, chainsaw supports. A list of supported formats can
+be found here: [https://github.com/mojombo/chronic][https://github.com/mojombo/chronic]
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'chainsaw'
-=======
-* whatever
-* blah
+    
+    gem install chainsaw
 
 ## Usage
 
-TODO: Write usage instructions here
+        > chainsaw access.log 1 hour ago                  # entries from one hour ago to now
+        > chainsaw access.log august                      # entries from August to now
+        > chainsaw access.log 2012-08-06                  # entries from August 6th to now
+        > chainsaw access.log 2012-08-27 10:00            # entries from August 27th at 10:00 to now
+
+        # You can use a hypen to specify a time range (you can mix and match formats)
+
+        > chainsaw access.log 2012-08-01 - 2012-09-17     # entries within August 1st and September 17th
+        > chainsaw access.log august - yesterday          # entries within August and September
+
+## Features
+
+### Additional text filter
+
+You can specify an additional simple text pattern to filter on top of the time arguments with the `-f` option.
+
+    > chainsaw access.log -f GET 1 hour ago
+
+### Colorize output
+
+You can have chainsaw colorize the timestamp for easy scanning with the `-c` option.
+
+    > chainsaw access.log -c GET 1 hour ago
+    
+### Interactive mode
+
+If you want to print a line and wait for input (press return) before moving to the next found line, you can use the `-i` option.
+    
+    > chainsaw access.log -i GET 1 hour ago
+    
+### Output to a file
+
+Chainsaw will output the found log lines to a file on the system if you specify with `-o FILENAME`.
+
+    > chainsaw access.log yesterday -o yesterday.log
 
 ## Contributing
 

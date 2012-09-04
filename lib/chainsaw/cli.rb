@@ -5,7 +5,7 @@ module Chainsaw
     Usage: chainsaw LOGFILE INTERVAL [OPTIONS]
 
     Description:
-      Parses log file and returns lines matching the time period provided.
+      Parses a log file and returns lines matching the time period provided.
 
       Chronic is used to parse the time strings, so any format chronic
       supports, chainsaw supports. A list of supported formats can
@@ -13,10 +13,10 @@ module Chainsaw
 
     Examples:
 
-      > chainsaw access.log 1 hour ago                  # entries within one hour from now
-      > chainsaw access.log august                      # entries within August and now
-      > chainsaw access.log 2012-08-06                  # entries within August 6th and now
-      > chainsaw access.log 2012-08-27 10:00            # entries within August 27th at 10:00 and now
+      > chainsaw access.log 1 hour ago                  # entries from one hour ago to now
+      > chainsaw access.log august                      # entries from August to now
+      > chainsaw access.log 2012-08-06                  # entries from August 6th to now
+      > chainsaw access.log 2012-08-27 10:00            # entries from August 27th at 10:00 to now
 
       You can use a hypen to specify a time range (you can mix and match formats)
 
@@ -39,7 +39,7 @@ module Chainsaw
         opts.separator ''
         opts.separator 'Options:'
 
-        opts.on('-p [PATTERN]', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
+        opts.on('-f [PATTERN]', 'Provide a regexp pattern to match on as well as the interval given') do |pattern|
           @options.pattern = pattern
         end
 
