@@ -97,7 +97,6 @@ describe Chainsaw::Detector do
 
   it 'detects python log format' do
     line   = get_log_line('python.log')
-    puts line
     format = Detector.detect(line)
     time   = get_time(line, format)
 
