@@ -12,15 +12,15 @@ be found here: https://github.com/mojombo/chronic
 
 ## Usage
 
-        > chainsaw access.log 1 hour ago                  # entries from one hour ago to now
-        > chainsaw access.log august                      # entries from August to now
-        > chainsaw access.log 2012-08-06                  # entries from August 6th to now
-        > chainsaw access.log 2012-08-27 10:00            # entries from August 27th at 10:00 to now
+    > chainsaw access.log 1 hour ago                  # entries from one hour ago to now
+    > chainsaw access.log august                      # entries from August to now
+    > chainsaw access.log 2012-08-06                  # entries from August 6th to now
+    > chainsaw access.log 2012-08-27 10:00            # entries from August 27th at 10:00 to now
 
-        # You can use a hypen to specify a time range (you can mix and match formats)
+    # You can use a hypen to specify a time range (you can mix and match formats)
 
-        > chainsaw access.log 2012-08-01 - 2012-09-17     # entries within August 1st and September 17th
-        > chainsaw access.log august - yesterday          # entries within August and September
+    > chainsaw access.log 2012-08-01 - 2012-09-17     # entries within August 1st and September 17th
+    > chainsaw access.log august - yesterday          # entries within August and September
 
 ## Features
 
