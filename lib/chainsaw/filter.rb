@@ -6,13 +6,13 @@ module Chainsaw
     # attempt to detect what type of logfile it is.
     #
     # logfile - the String path of the logfile to be filtered
-    # bounds  - the "time" period to filter through (Time or Range)
+    # range  - the "time" range to filter through (Time or Range)
     # options - an OpenStruct representing the options
     #
     # Returns the Filter instance
-    def initialize(logfile, bounds, options = OpenStruct.new)
+    def initialize(logfile, range, options = OpenStruct.new)
       @logfile    = logfile
-      @bounds     = bounds
+      @range      = range
       @options    = options
       @log        = File.open(@logfile)
       @format     = Detector.detect(@log)
@@ -37,7 +37,7 @@ module Chainsaw
         end
 
         # a match was found if we are filtering additional text, check that too
-        if match && within_bounds?(time) && ( !filter || filter && line.include?(filter) )
+        if match && @range.cover?(time) && ( !filter || filter && line.include?(filter) )
           found(line, timestamp)
         # a match was found and we are outputting non-timestamped lines
         elsif match && @outputting
@@ -51,20 +51,6 @@ module Chainsaw
       unless @options.output_file
         hind = (@line_count.zero? || @line_count > 1) ? 's' : ''
         puts "\n\033[33mFound #{@line_count} line#{hind} \033[0m"
-      end
-    end
-
-    # Check to see if the parsed Time is within the bounds
-    # of our given Time or time Range.
-    #
-    # time - the parsed Time from the logline
-    #
-    # Returns true if within bounds
-    def within_bounds?(time)
-      if @bounds.is_a? Range
-        @bounds.cover?(time)
-      else
-        @bounds < time
       end
     end
 

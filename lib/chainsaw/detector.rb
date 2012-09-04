@@ -55,7 +55,7 @@ module Chainsaw
       type = nil
 
       log.each_line do |line|
-        type = _detect(line)
+        type = get_type(line)
         break unless type.nil?
       end
 
@@ -67,7 +67,7 @@ module Chainsaw
       end
     end
 
-    def self._detect(line)
+    def self.get_type(line)
       type = nil
       
       PATTERNS.each do |key, value|

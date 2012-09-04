@@ -81,14 +81,12 @@ module Chainsaw
       if delimiter
         starting = Chronic.parse(args[0..(delimiter - 1)].join(' '), CHRONIC_OPTIONS).begin
         ending   = Chronic.parse(args[(delimiter + 1)..-1].join(' '), CHRONIC_OPTIONS).begin
-
-        starting..ending
       else
-        Chronic.parse(args.join(' '), CHRONIC_OPTIONS).begin
+        starting = Chronic.parse(args.join(' '), CHRONIC_OPTIONS).begin
+        ending   = Time.now
       end
-    end
-
-    def self.validate_logfile
+      
+      starting..ending
     end
 
     def self.print_usage_and_exit!
