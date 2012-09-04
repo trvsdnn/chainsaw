@@ -22,7 +22,7 @@ module Chainsaw
 
         if match
           timestamp = match[1]
-          time      = DateTime.strptime(timestamp, @format.time_format).to_time
+          time      = Filter.parse_timestamp(timestamp, @format.time_format)
         else
           timestamp = time = nil
         end
@@ -63,6 +63,18 @@ module Chainsaw
         puts line.sub(timestamp, "\033[32m#{timestamp}\033[0m")
       else
         puts line
+      end
+    end
+
+    def self.parse_timestamp(timestamp, time_format)
+      if time_format.include?('%z')
+        DateTime.strptime(timestamp, time_format).to_time
+      else
+        # ugly, i know... find a better way
+        timestamp   = timestamp + (Time.now.utc_offset / 4600).to_s
+        time_format = time_format + ' %z'
+
+        DateTime.strptime(timestamp, time_format).to_time
       end
     end
 
