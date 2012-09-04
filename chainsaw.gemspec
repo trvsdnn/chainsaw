@@ -2,11 +2,11 @@
 require File.expand_path('../lib/chainsaw/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ['ljfauscett']
-  gem.email         = ['ljfauscett@gmail.com']
-  gem.description   = 'Cutting up logs like shelby stanga'
-  gem.summary       = 'wahhhhh'
-  gem.homepage      = ''
+  gem.authors       = ['blahed', 'ljfauscett']
+  gem.email         = ['tdunn13@gmail.com']
+  gem.description   = 'Filter logfiles based on a time range'
+  gem.summary       = 'Filter logfiles based on a time range. Uses chronic so your time arguments can be almost anything.'
+  gem.homepage      = 'https://github.com/blahed/chainsaw/'
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
