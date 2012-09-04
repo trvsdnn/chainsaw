@@ -50,7 +50,7 @@ module Chainsaw
 
       unless @options.output_file
         hind = (@line_count.zero? || @line_count > 1) ? 's' : ''
-        puts "\n\033[1mFound #{@line_count} line#{hind} \033[0m"
+        puts "\n\033[33mFound #{@line_count} line#{hind} \033[0m"
       end
     end
 
