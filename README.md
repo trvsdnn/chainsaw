@@ -47,6 +47,21 @@ If you want to print a line and wait for input (press return) before moving to t
 Chainsaw will output the found log lines to a file on the system if you specify with `-o FILENAME`.
 
     > chainsaw access.log yesterday -o yesterday.log
+    
+## Supported log formats (we think anyway)
+
+* syslog
+* apache/nginx access (CLF)
+* apache error
+* nginx error
+* rack
+* rails
+* django
+* mongodb
+* redis
+* puppet
+* python logger
+* ruby logger
 
 ## Contributing
 
