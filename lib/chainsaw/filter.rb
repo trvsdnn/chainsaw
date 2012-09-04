@@ -82,23 +82,15 @@ module Chainsaw
       end
     end
 
-    # Parse a timestamp using the given time_format. If a timezone
-    # isn't included in the timestamp, we'll set it to the current local
-    # timezone
+    # Parse a timestamp using the given time_format.
     #
     # timestamp - the String timestamp
     # time_format - the String time format used to parse
     #
-    # Returns the parsed Time object
+    # Returns a parsed Time object
     def self.parse_timestamp(timestamp, time_format)
-      if time_format.include?('%z')
-        dt = DateTime.strptime(timestamp, time_format)
-      else
-        # ugly, i know... find a better way
-        timestamp   = timestamp + ' ' + (Time.now.utc_offset / 3600).to_s
-        time_format = time_format + ' %z'
-        dt = DateTime.strptime(timestamp, time_format)
-      end
+      dt = DateTime.strptime(timestamp, time_format)
+
       Time.local(dt.year, dt.month, dt.day, dt.hour, dt.min, dt.sec)
     end
 
