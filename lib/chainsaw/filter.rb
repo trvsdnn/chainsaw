@@ -103,15 +103,16 @@ module Chainsaw
     # Returns the parsed Time object
     def self.parse_timestamp(timestamp, time_format)
       if time_format.include?('%z')
-        DateTime.strptime(timestamp, time_format).to_time
+        dt = DateTime.strptime(timestamp, time_format)
       else
         # ugly, i know... find a better way
         timestamp   = timestamp + (Time.now.utc_offset / 3600).to_s
         time_format = time_format + ' %z'
-
-        DateTime.strptime(timestamp, time_format).to_time
+        dt = DateTime.strptime(timestamp, time_format)
       end
+      Time.local(dt.year, dt.month, dt.day, dt.hour, dt.min, dt.sec)
     end
+
 
     # A convinence method to initialize a Filter object using the
     # given args and start filtering it
