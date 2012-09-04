@@ -4,7 +4,7 @@ Parses a log file and returns lines matching the time period provided.
 
 Chronic is used to parse the time strings, so any format chronic
 supports, chainsaw supports. A list of supported formats can
-be found here: [][https://github.com/mojombo/chronic]
+be found here: https://github.com/mojombo/chronic
 
 ## Installation
     
