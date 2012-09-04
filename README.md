@@ -1,4 +1,5 @@
-# Chainsaw
+# Chainsaw [![Build Status](https://secure.travis-ci.org/blahed/chainsaw.png)](http://travis-ci.org/blahed/chainsaw)
+
 
 Parses a log file and returns lines matching the time period provided. Chainsaw tries to be smart about determining the log format and parsing it accordingly. See the list of currently supported formats below.
 
