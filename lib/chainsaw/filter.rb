@@ -95,7 +95,7 @@ module Chainsaw
         dt = DateTime.strptime(timestamp, time_format)
       else
         # ugly, i know... find a better way
-        timestamp   = timestamp + (Time.now.utc_offset / 3600).to_s
+        timestamp   = timestamp + ' ' + (Time.now.utc_offset / 3600).to_s
         time_format = time_format + ' %z'
         dt = DateTime.strptime(timestamp, time_format)
       end
