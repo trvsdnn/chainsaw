@@ -48,7 +48,10 @@ module Chainsaw
         end
       end
 
-      puts "\nFound #{@line_count} line(s)" unless @options.output_file
+      unless @options.output_file
+        hind = (@line_count.zero? || @line_count > 1) ? 's' : ''
+        puts "\n\033[32mFound #{@line_count} line#{hind} \033[0m"
+      end
     end
 
     # Check to see if the parsed Time is within the bounds
