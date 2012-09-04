@@ -8,7 +8,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'clf'
+    format.type.must_equal :clf
     time.must_equal Time.local(2012, 8, 26, 7, 42, 20)
   end
 
@@ -17,7 +17,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'apache_error'
+    format.type.must_equal :apache_error
 
     time.must_equal Time.local(2012, 8, 26, 7, 42, 20)
   end
@@ -27,7 +27,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'nginx_error'
+    format.type.must_equal :nginx_error
     time.must_equal Time.local(2012, 8, 29, 7, 48, 59)
   end
 
@@ -36,7 +36,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'ruby_logger'
+    format.type.must_equal :ruby_logger
     time.must_equal Time.local(2012, 9, 1, 11, 21, 26)
   end
 
@@ -45,7 +45,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'rails'
+    format.type.must_equal :rails
     time.must_equal Time.local(2012, 9, 1, 9, 34, 35)
   end
 
@@ -55,7 +55,7 @@ describe Chainsaw::Detector do
     time   = get_time(line, format)
     year = Time.now.year
 
-    format.type.must_equal 'syslog'
+    format.type.must_equal :syslog
     time.must_equal Time.local(2012, 8, 1, 17, 36, 55)
   end
 
@@ -64,7 +64,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'redis'
+    format.type.must_equal :redis
     time.must_equal Time.local(2012, 4, 12, 18, 43, 33)
   end
 
@@ -73,7 +73,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'puppet'
+    format.type.must_equal :puppet
     time.must_equal Time.local(2012, 02, 04, 04, 8, 52)
   end
 
@@ -82,7 +82,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'mongodb'
+    format.type.must_equal :mongodb
     time.must_equal Time.local(2012, 8, 26, 7, 43, 54)
   end
 
@@ -91,7 +91,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'rack'
+    format.type.must_equal :rack
     time.must_equal Time.local(2012, 9, 03, 22, 51, 16)
   end
 
@@ -100,7 +100,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'python'
+    format.type.must_equal :python
     time.must_equal Time.local(2010, 12, 12, 11, 41, 42)
   end
 
@@ -109,7 +109,7 @@ describe Chainsaw::Detector do
     format = Detector.detect(line)
     time   = get_time(line, format)
 
-    format.type.must_equal 'django'
+    format.type.must_equal :django
     time.must_equal Time.local(2012, 9, 03, 21, 49, 47)
   end
 

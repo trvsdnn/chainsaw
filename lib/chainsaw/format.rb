@@ -4,7 +4,11 @@ module Chainsaw
     attr_accessor :time_format
     attr_accessor :pattern
 
-    def initialize
+    def initialize(type, attributes = {})
+      @type = type
+      attributes.each do |key, value|
+        send(:"#{key}=", value)
+      end
     end
 
   end
