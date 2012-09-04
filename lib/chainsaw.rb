@@ -5,6 +5,7 @@ require 'optparse'
 require 'chronic'
 
 require 'chainsaw/cli'
+require 'chainsaw/core_extensions'
 require 'chainsaw/format'
 require 'chainsaw/detector'
 require 'chainsaw/filter'
