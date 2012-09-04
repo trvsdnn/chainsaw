@@ -40,7 +40,7 @@ You can have chainsaw colorize the timestamp for easy scanning with the `-c` opt
 
 If you want to print a line and wait for input (press return) before moving to the next found line, you can use the `-i` option.
     
-    > chainsaw access.log -i GET 1 hour ago
+    > chainsaw access.log -i 1 hour ago
     
 ### Output to a file
 
