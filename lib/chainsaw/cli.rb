@@ -4,15 +4,24 @@ module Chainsaw
     BANNER = <<-BANNER
     Usage: chainsaw LOGFILE INTERVAL [OPTIONS]
 
-    Description: Parses log file and returns lines matching the interval or time period you provide
+    Description:
+      Parses log file and returns lines matching the time period provided.
 
-    Example:
+      Chronic is used to parse the time strings, so any format chronic
+      supports, chainsaw supports. A list of supported formats can
+      be found here: https://github.com/mojombo/chronic
 
-      > chainsaw access.log 1 hour ago           # logs entries within one hour from now
-      > chainsaw access.log 2012-08              # logs dated within August 2012
-      > chainsaw access.log 2012-08-27           # logs dated within August 27th 2012
-      > chainsaw access.log 2012-08-27T12:00     # logs dated within the hour of 12:00 on August 27th 2012
-      > chainsaw access.log 2012-08 2012-09      # logs dated within August and September of 2012
+    Examples:
+
+      > chainsaw access.log 1 hour ago                  # entries within one hour from now
+      > chainsaw access.log august                      # entries within August and now
+      > chainsaw access.log 2012-08-06                  # entries within August 6th and now
+      > chainsaw access.log 2012-08-27 10:00            # entries within August 27th at 10:00 and now
+
+      You can use a hypen to specify a time range (you can mix and match formats)
+
+      > chainsaw access.log 2012-08-01 - 2012-09-17     # entries within August 1st and September 17th
+      > chainsaw access.log august - yesterday          # entries within August and September
 
     BANNER
 
@@ -87,7 +96,7 @@ module Chainsaw
       time    = parse_time_args(ARGV[1..-1])
 
       trap(:INT) { exit }
-      Filter.filter(logfile, interval, @options)
+      Filter.filter(logfile, time, @options)
     end
   end
 end
