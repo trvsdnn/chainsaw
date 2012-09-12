@@ -113,6 +113,14 @@ describe Chainsaw::Detector do
     time.must_equal Time.local(2012, 9, 03, 21, 49, 47)
   end
 
+  it 'detects nslog log format' do
+    line   = get_log_line('nslog.log')
+    format = Detector.detect(line)
+    time   = get_time(line, format)
+
+    format.type.must_equal :nslog
+    time.must_equal Time.local(2012, 8, 30, 04, 54, 48)
+  end
 
   def get_time(line, format)
     timestamp = line.match(format.pattern)[1]

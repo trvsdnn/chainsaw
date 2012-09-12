@@ -42,12 +42,16 @@ module Chainsaw
         :time_format => '%d/%b/%Y %H:%M:%S'
       },
       :python => {
-        :pattern     => /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})/i,
+        :pattern     => /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}),\d{3}/i,
         :time_format => '%Y-%m-%d %H:%M:%S'
       },
       :django => {
         :pattern     => /^\[(\d{2}\/[a-z]{3}\/\d{4} \d{2}:\d{2}:\d{2})\]/i,
         :time_format => '%d/%b/%Y %H:%M:%S'
+      },
+      :nslog => {
+        :pattern     => /^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\.\d{3} [a-z0-9]+\[/i,
+        :time_format => '%Y-%m-%d %H:%M:%S'
       }
     }
 
