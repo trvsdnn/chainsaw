@@ -16,6 +16,4 @@ if defined? Encoding
   Encoding.default_internal = Encoding::UTF_8
 end
 
-module Chainsaw
-
-end
+module Chainsaw;end
