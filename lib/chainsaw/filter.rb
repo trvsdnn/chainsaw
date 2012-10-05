@@ -17,17 +17,14 @@ module Chainsaw
       @log        = File.open(@logfile)
       @line_count = 0
 
-      @log.rewind
-
       self
     end
 
     # Start iterating through the log lines and filtering them accordingly.
-    # bin/chainsaw production.log 1 hour ago  2.18s user 0.05s system 98% cpu 2.254 total
     def start
       @ofilter = @options.filter
 
-      @log.each do |line|
+      File.open(@logfile).each do |line|
         if !@detected && @format = Detector.detect(line)
           @detected = true
           @log.rewind
