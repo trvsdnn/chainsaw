@@ -27,11 +27,11 @@ module Chainsaw
     def start
       @ofilter = @options.filter
 
-      @log.each_line do |line|
+      @log.each do |line|
         if !@detected && @format = Detector.detect(line)
           @detected = true
           @log.rewind
-        else
+        elsif @format.nil?
           next
         end
 
