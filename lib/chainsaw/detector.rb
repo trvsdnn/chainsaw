@@ -55,25 +55,19 @@ module Chainsaw
       }
     }
 
-    def self.detect(log)
-      type = nil
+    def self.detect(line)
+      type = get_type(line)
+      type.nil? ? nil : Format.new(type, PATTERNS[type])
+    end
 
-      log.each_line do |line|
-        type = get_type(line)
-        break unless type.nil?
-      end
-
-      if type.nil?
-        puts "\033[31mUnable to determine log format :(\033[0m"
-        exit
-      else
-        Format.new(type, PATTERNS[type])
-      end
+    def self.undetectable!
+      puts "\033[31mUnable to determine log format :(\033[0m"
+      exit
     end
 
     def self.get_type(line)
       type = nil
-      
+
       PATTERNS.each do |key, value|
         if line.match(value[:pattern])
           type = key

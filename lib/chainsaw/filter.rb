@@ -15,7 +15,6 @@ module Chainsaw
       @range      = range
       @options    = options
       @log        = File.open(@logfile)
-      @format     = Detector.detect(@log)
       @line_count = 0
 
       @log.rewind
@@ -24,10 +23,19 @@ module Chainsaw
     end
 
     # Start iterating through the log lines and filtering them accordingly.
+    # bin/chainsaw production.log 1 hour ago  2.18s user 0.05s system 98% cpu 2.254 total
     def start
+      @ofilter = @options.filter
+
       @log.each_line do |line|
-        filter    = @options.filter
-        match     = line.match(@format.pattern)
+        if !@detected && @format = Detector.detect(line)
+          @detected = true
+          @log.rewind
+        else
+          next
+        end
+
+        match = line.match(@format.pattern)
 
         if match
           timestamp = match[1]
@@ -37,7 +45,7 @@ module Chainsaw
         end
 
         # a match was found if we are filtering additional text, check that too
-        if match && @range.cover?(time) && ( !filter || filter && line.include?(filter) )
+        if match && @range.cover?(time) && ( !@ofilter || @ofilter && line.include?(@ofilter) )
           found(line, timestamp)
         # a match was found and we are outputting non-timestamped lines
         elsif match && @outputting
