@@ -21,6 +21,10 @@ module Chainsaw
         :pattern     => /^started [a-z]+ "[^"]+" for \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} at (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} (-|\+)\d{4})/i,
         :time_format => '%Y-%m-%d %H:%M:%S %z'
       },
+      :rails2 => {
+        :pattern     => /^Processing [\w#]+ \(for \d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} at (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\) \[[a-z]+\]/i,
+        :time_format => '%Y-%m-%d %H:%M:%S'
+      },
       :syslog => {
         :pattern     => /^([a-z]{3}  ?\d{1,2} \d{2}:\d{2}:\d{2})/i,
         :time_format => '%b %e %H:%M:%S'

@@ -49,6 +49,15 @@ describe Chainsaw::Detector do
     time.must_equal Time.local(2012, 9, 1, 9, 34, 35)
   end
 
+  it 'detects rails 2 log format' do
+    line   = get_log_line('rails2.log')
+    format = Detector.detect(line)
+    time   = get_time(line, format)
+
+    format.type.must_equal :rails2
+    time.must_equal Time.local(2012, 10, 25, 18, 6, 13)
+  end
+
   it 'detects syslog log format' do
     line   = get_log_line('syslog.log')
     format = Detector.detect(line)
