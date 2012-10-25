@@ -80,4 +80,15 @@ describe Chainsaw::Filter do
     File.open(output_file).first.must_equal "127.0.0.1 - - [30/Aug/2012:15:00:28 -0400] \"HEAD / HTTP/1.1\" 200 338 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.19 (KHTML, like Gecko) Ubuntu/12.04 Chromium/18.0.1025.168 Chrome/18.0.1025.168 Safari/535.19\"\n"
     File.delete(output_file)
   end
+
+  it 'catches invalid byte sequence in UTF-8 (ArgumentError) error' do
+    logfile  = File.expand_path('../logs/rails_invalid_byte_sequence.log', __FILE__)
+    starting = Time.local(2012, 8, 30, 10, 51, 05)
+    ending   = Time.now
+    filter   = Filter.new(logfile, starting..ending)
+
+    out, err = capture_io { filter.start }
+    out.wont_include 'ArgumentError: invalid byte sequence in UTF-8'
+    err.wont_include 'ArgumentError: invalid byte sequence in UTF-8'
+  end
 end
