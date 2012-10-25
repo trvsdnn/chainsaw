@@ -1,0 +1,24 @@
+Processing HomeController#index (for 127.0.0.1 at 2012-10-25 18:06:13) [GET]
+Rendering home/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://0.0.0.0/]
+SQL (0.1ms)  SET NAMES 'utf8'
+SQL (0.1ms)  SET SQL_AUTO_IS_NULL=0
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-10-25 18:06:14) [GET]
+Rendering home/index
+Completed in 1ms (View: 0, DB: 0) | 200 OK [http://0.0.0.0/]
+SQL (0.1ms)  SET NAMES 'utf8'
+SQL (0.1ms)  SET SQL_AUTO_IS_NULL=0
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-10-25 18:06:16) [GET]
+
+ActionController::RoutingError (No route matches "/foo" with {:method=>:get}):
+  /Users/usr0600121/.rbenv/versions/ree-1.8.7-2012.02/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/usr0600121/.rbenv/versions/ree-1.8.7-2012.02/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/usr0600121/.rbenv/versions/ree-1.8.7-2012.02/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/usr0600121/.rbenv/versions/ree-1.8.7-2012.02/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/usr0600121/.rbenv/versions/ree-1.8.7-2012.02/lib/ruby/1.8/webrick/server.rb:162
+
+Rendering rescues/layout (not_found)
