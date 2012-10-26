@@ -131,6 +131,11 @@ describe Chainsaw::Detector do
     time.must_equal Time.local(2012, 8, 30, 04, 54, 48)
   end
 
+  it 'catches invalid byte sequence in UTF-8 (ArgumentError) error' do
+    log_line_including_invalid_byte_sequence = File.open(File.expand_path("../logs/rails_invalid_byte_sequence.log", __FILE__)).readlines[2]
+    proc { Detector.get_type(log_line_including_invalid_byte_sequence) }.must_be_silent
+  end
+
   def get_time(line, format)
     timestamp = line.match(format.pattern)[1]
     time      = Filter.parse_timestamp(timestamp, format.time_format)

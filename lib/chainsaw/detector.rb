@@ -73,9 +73,14 @@ module Chainsaw
       type = nil
 
       PATTERNS.each do |key, value|
-        if line.match(value[:pattern])
-          type = key
-          break
+        begin
+          if line.match(value[:pattern])
+            type = key
+            break
+          end
+        rescue ArgumentError
+          line.encode!("UTF-8", "UTF-8", :invalid => :replace, :undef => :replace, :replace => '?')
+          redo
         end
       end
 

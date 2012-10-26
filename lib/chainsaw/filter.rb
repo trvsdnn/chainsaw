@@ -32,7 +32,12 @@ module Chainsaw
           next
         end
 
-        match = line.match(@format.pattern)
+        begin
+          match = line.match(@format.pattern)
+        rescue ArgumentError
+          line.encode!("UTF-8", "UTF-8", :invalid => :replace, :undef => :replace, :replace => '?')
+          redo
+        end
 
         if match
           timestamp = match[1]
