@@ -1,0 +1,5 @@
+Started GET "/top/index" for 127.0.0.1 at 2012-10-25 23:01:11 +0900
+Processing by TopController#index as */*
+  Parameters: {"body"=>"‚±‚ñ‚É‚¿‚Í¢ŠEI"}
+  Rendered top/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms)
